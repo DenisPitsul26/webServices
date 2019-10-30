@@ -1,0 +1,7 @@
+<div class="content1">
+  <button class="btn btn-primary" (click)="auth()">Sign In</button>
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Input access code" [(ngModel)]="accessCode"/>
+    <button class="btn btn-success" [disabled]="disabledButton && accessCode!==''" (click)="getAccess()">Get Access</button>
+  </div>
+</div>
