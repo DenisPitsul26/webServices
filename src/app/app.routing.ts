@@ -1,11 +1,13 @@
 import {RouterModule, Routes} from '@angular/router';
 import {AuthComponent} from './components/auth/auth.component';
 import {SystemComponent} from './components/system/system.component';
+import {MainPageComponent} from './components/main-page/main-page.component';
 // import {LoginComponent} from './components/login/login.component';
 
 
 const appRoutes: Routes = [
-  {path: '', redirectTo: 'login', pathMatch: 'full'},
+  // {path: '', redirectTo: 'login', pathMatch: 'full'},
+  {path: '', component: MainPageComponent},
   {path: 'auth', component: AuthComponent},
   {path: 'system', component: SystemComponent},
   // {path: 'login', component: LoginComponent},

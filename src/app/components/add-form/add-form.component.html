@@ -1,0 +1,17 @@
+<div class="container-fluid main">
+  <div class="col-lg-12 col-sm-12 col-md-12 col-xl-12">
+    <div class="div-add">
+      <input type="text" class="form-control item" placeholder="Input item's name"/>
+      <input type="number" class="form-control item" placeholder="Input item's price"/>
+      <textarea type="text" class="form-control item" placeholder="Input item's description"></textarea>
+      <input
+        style="display: none"
+        type="file" (change)="onFileChanged($event)"
+        #fileInput>
+      <button (click)="fileInput.click()">Select Item's photo</button>
+      <img [src]="imgURL" height="200" *ngIf="imgURL">
+      <button (click)="onUpload()">Upload!</button>
+      <button class="btn btn-success item" >Add</button>
+    </div>
+  </div>
+</div>

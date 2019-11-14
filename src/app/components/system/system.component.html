@@ -1,1 +1,21 @@
-<app-my-tree></app-my-tree>
+
+<div id="myModalApp" class="modal">
+  <div class="modal-contentAddApp center">
+    <div class="modal-bodyAdd">
+      <div>
+        <mat-sidenav-container  class="example-container">
+          <mat-sidenav  mode="side" opened style="width: min-content">
+            <div style="width: 240px;">
+<!--              <button class="btn-info" style="margin-top: 15px" (click)="clear()">Clear filters</button>-->
+<!--              <app-my-tree appWidthChange (name)="changeFilter($event)"></app-my-tree>-->
+            </div>
+          </mat-sidenav>
+          <mat-sidenav-content >
+            <!--<app-list-items [name]="name"></app-list-items>-->
+            <app-add-form></app-add-form>
+          </mat-sidenav-content>
+        </mat-sidenav-container>
+      </div>
+    </div>
+  </div>
+</div>

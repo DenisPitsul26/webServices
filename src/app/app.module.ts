@@ -14,6 +14,12 @@ import { MatButtonModule } from '@angular/material/button';
 import {CdkTreeModule} from '@angular/cdk/tree';
 // import { LoginComponent } from './components/login/login.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { SidebarModule } from 'ng-sidebar';
+import {MatSidenavModule} from '@angular/material';
+import { WidthChangeDirective } from './directives/width-change.directive';
+import { ListItemsComponent } from './components/list-items/list-items.component';
+import { AddFormComponent } from './components/add-form/add-form.component';
+import { MainPageComponent } from './components/main-page/main-page.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +27,11 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     AuthComponent,
     SystemComponent,
     MyTreeComponent,
+    WidthChangeDirective,
+    WidthChangeDirective,
+    ListItemsComponent,
+    AddFormComponent,
+    MainPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +43,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatIconModule,
     MatButtonModule,
     CdkTreeModule,
-    FormsModule
+    FormsModule,
+    SidebarModule.forRoot(),
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

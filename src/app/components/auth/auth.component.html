@@ -1,7 +1,11 @@
-<div class="content1">
-  <button class="btn btn-primary" (click)="auth()">Sign In</button>
-  <div class="form-group">
-    <input type="text" class="form-control" placeholder="Input access code" [(ngModel)]="accessCode"/>
-    <button class="btn btn-success" [disabled]="disabledButton && accessCode!==''" (click)="getAccess()">Get Access</button>
+<div class="container-fluid main">
+  <div class="col-lg-12 col-sm-12 col-md-12 col-xl-12">
+    <div class="div-auth">
+      <input type="text" class="form-control item" placeholder="Input secret token" [(ngModel)]="secretToken"/>
+      <input type="text" class="form-control item" placeholder="Input request token" [(ngModel)]="requestToken"/>
+      <button class="btn btn-primary item" (click)="auth()">Sign In</button>
+      <input type="text" class="form-control item" placeholder="Input access code" [(ngModel)]="accessCode"/>
+      <button class="btn btn-success item" [disabled]="accessCode===''" (click)="getAccess()">Get Access</button>
+    </div>
   </div>
 </div>

@@ -14,6 +14,8 @@ export class AuthComponent implements OnInit {
   private sub1: Subscription;
   private token: OauthToken;
   accessCode = '';
+  requestToken = '';
+  secretToken = '';
   disabledButton = true;
 
   constructor(private authService: AuthService,
@@ -35,19 +37,22 @@ export class AuthComponent implements OnInit {
         this.disabledButton = true;
       } else {
         this.token = data;
+        console.log('login', this.token);
+        this.requestToken = this.token.request_token;
+        this.secretToken = this.token.token_secret;
         // this.document.location.href = this.token.oauth_url;
         window.open(this.token.oauth_url, '_blank');
         this.disabledButton = false;
       }
     });
   }
-
-
-
   getAccess() {
-    console.log(this.accessCode, this.token.request_token, this.token.token_secret);
-    // this.authService.getAccessCode(this.accessCode, this.token.request_token, this.token.token_secret).subscribe((data: any) => {
-    //   console.log('Access: ', data);
-    // });
+    // console.log(this.accessCode, this.token.request_token, this.token.token_secret);
+    this.authService.getAccessCode(this.accessCode, this.token.request_token, this.token.token_secret)
+      .subscribe((data: any) => {
+        console.log('Access: ', data);
+        // window.localStorage.setItem('user', {});
+        this.router.navigate(['/system']);
+    });
   }
 }

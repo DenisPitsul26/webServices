@@ -1,23 +1,23 @@
-<mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
-  <mat-tree-node (click)="click()" *matTreeNodeDef="let node" matTreeNodeToggle matTreeNodePadding>
-    <button mat-icon-button>
-      <mat-icon class="type-icon" [attr.aria-label]="node.type + 'icon'">
-        {{ node.type === 'file' ? 'description' : 'folder' }}
-      </mat-icon>
+<mat-tree [dataSource]="dataSource" [treeControl]="treeControl" appWidthChange>
+  <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle matTreeNodePadding matTreeNodePaddingIndent="22">
+    <button mat-icon-button (click)="click(node)">
+<!--      <mat-icon class="type-icon" [attr.aria-label]="node.type + 'icon'">-->
+<!--        {{ node.type === 'cart-plus' ? 'description' : 'folder' }}-->
+<!--      </mat-icon>-->
       {{node.name}}
     </button>
 
   </mat-tree-node>
 
-  <mat-tree-node *matTreeNodeDef="let node; when: hasChild" matTreeNodePadding>
+  <mat-tree-node *matTreeNodeDef="let node; when: hasChild" matTreeNodePadding matTreeNodePaddingIndent="10">
     <button mat-icon-button matTreeNodeToggle
             [attr.aria-label]="'toggle ' + node.name">
       <mat-icon class="mat-icon-rtl-mirror">
         {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
       </mat-icon>
-      <mat-icon class="type-icon" [attr.aria-label]="node.type + 'icon'">
-        {{ node.type ==='file' ? 'description' : 'folder' }}
-      </mat-icon>
+<!--      <mat-icon class="type-icon" [attr.aria-label]="node.type + 'icon'">-->
+<!--        {{ node.type ==='cart-plus' ? 'description' : 'folder' }}-->
+<!--      </mat-icon>-->
       <span>{{node.name}}</span>
     </button>
   </mat-tree-node>
