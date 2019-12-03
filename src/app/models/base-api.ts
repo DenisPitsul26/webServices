@@ -4,7 +4,8 @@ import {Observable} from 'rxjs';
 
 @Injectable({providedIn: 'root'})
 export class BaseApi {
-  private baseUrl = 'http://192.168.0.119:8080/';
+  // private baseUrl = 'http://192.168.0.119:8080/';
+  private baseUrl = 'http://localhost:8080/';
 
   constructor(public http: HttpClient) {}
 

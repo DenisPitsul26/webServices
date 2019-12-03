@@ -16,7 +16,6 @@ import {CdkTreeModule} from '@angular/cdk/tree';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { SidebarModule } from 'ng-sidebar';
 import {MatSidenavModule} from '@angular/material';
-import { WidthChangeDirective } from './directives/width-change.directive';
 import { ListItemsComponent } from './components/list-items/list-items.component';
 import { AddFormComponent } from './components/add-form/add-form.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
@@ -27,8 +26,6 @@ import { MainPageComponent } from './components/main-page/main-page.component';
     AuthComponent,
     SystemComponent,
     MyTreeComponent,
-    WidthChangeDirective,
-    WidthChangeDirective,
     ListItemsComponent,
     AddFormComponent,
     MainPageComponent,

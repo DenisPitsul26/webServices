@@ -1,3 +1,5 @@
+import {Categories} from './categories';
+
 export class Category {
   category_id: number;
   name: string;
@@ -10,6 +12,5 @@ export class Category {
   short_name: string;
   long_name: string;
   num_children: number;
-  children: Category[];
-  requestParam: string;
+  categories: Categories;
 }
